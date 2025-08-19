@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?damily=Krona+One&damily=Montserrat:wght@4;display=swap');
+
+:root{
+    --cor-primaria: black;
+    --cor-secundaria:#f6f6f6;
+    --cor-terciaria:#22d4fd;
+    --cor-hover:#272727;
+
+    --fonte-primaria: 'Krona One',sans-serif;
+    --fonte-secundaria:'Montserrat', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    box-sizing: border-box; /*Todo elemento dentro do body, ótima pratica de CSS 
+    par a imagem n sair do body*/
+    /*height: 100vh; /*Padrão mais usado para o body cobrir a pagina inteira*/
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+.cabecalho{
+    padding:2% 0% 0% 15% ;
+}
+.cabecalho_menu{
+    display: flex;
+    gap: 80px;
+}
+.cabecalho_menu_link{
+    font-family: var(--fonte-secundaria);
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+}
+
+
+.apresentacao{
+    padding: 5% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:82px;
+}
+.apresentacao_conteudo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 615px ;
+    
+}
+.apresentacao_conteudo_titulo{
+    font-size: 2.25rem;  /*1 rem equivale a 16px*/
+    font-family:var(--fonte-primaria) ;
+}
+.tituloDestaque{
+    color:var(--cor-terciaria);
+
+}
+.apresentacao_conteudo_texto{
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+    
+}
+.apresentacao_conteudo_texto a{
+    text-decoration: none;
+    color: var(--cor-terciaria);
+}
+.apresentacao_links{
+    align-items: center; /*Alinha os itens no meio*/
+    display: flex; /*coloca os quadrados lado a lado*/
+    flex-direction: column; /*Deixa a div com o formato de coluna*/
+    justify-content: space-between; /*Da um espaço entre os links ou o conteudo*/
+    gap:32px;/*adiciona espaços iguais entre cada quadrado*/
+}
+.apresentacao_links_subtitulo{
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size:1.5rem;
+}
+
+.apresentacao_links_navegacao{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    width: 50%; /*Unidade relativa sempre ao elemento pai*/
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 15.5px 0;
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-family:var(--fonte-secundaria) ;
+    border: 2px solid var(--cor-terciaria); /*Fazer uma borda em volta do conteudo e coloquei o tamanho da borda/grossura,tracejado da borda é solido,  em seguido coloquei uma cor nessa borda*/
+}
+.apresentacao_imagem {
+    width: 50%;
+}
+.apresentacao_links_links:hover{ /*Este :HOVER  ele serve para quando o mouse passe pelo conteudo ele sobreponha outra cor,
+mostrando que você pode clicar no notão */
+    padding: 3%;
+    background-color:var(--cor-hover);
+}
+.rodape{
+    color: var(--cor-primaria);
+    background-color: var(--cor-terciaria);
+    padding:24px ; /*Este código coloca um espaço para fora do texto, até a borda esse espaço pode ser aumentado */
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+@media(max-width:1200px){
+    .cabecalho{
+        padding: 8%;
+    }  
+    .cabecalho_menu{
+        justify-content: center;
+        padding: 5%;
+    }
+    .apresentacao{
+    flex-direction: column-reverse;
+    }
+    .apresentacao_conteudo{
+        width: auto;
+    }
+
+}
